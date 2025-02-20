@@ -54,8 +54,6 @@ public class Palabra {
         this.acierto = acierto;
     }
 
-    public void validar(){}
-
     private static List<String> listaPalabras = new ArrayList<>();
 
 
@@ -83,7 +81,13 @@ public class Palabra {
     }
 
     public static boolean existePalabra(String palabra) {
-        return listaPalabras.stream().anyMatch(p -> p.equalsIgnoreCase(palabra));
+        for (String p : listaPalabras) {
+            if (p.equalsIgnoreCase(palabra)) {
+                return true;
+            }
+        }
+        return false;
     }
+
 
 }
