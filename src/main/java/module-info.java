@@ -1,6 +1,7 @@
 module com.example.repaso {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens com.example.repaso to javafx.fxml;
